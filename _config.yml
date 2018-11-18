@@ -1,0 +1,67 @@
+# Site settings
+title: Ryan Homer
+url: "https://ryanhomer.github.io"
+baseurl: "" # the prefix of your site uri, eg. `"/jekyll-theme-EasyBook"` or empty string `""`
+timezone: America/Vancouver
+description: >
+  A Data Science Journey.
+
+# Your information
+author: Ryan Homer
+avatar: "https://gravatar.com/avatar/30e45bcbe425836a2c970e896ffe55d0"
+profile: Frontend Software Developer<br/>Aspiring Data Scientist
+twitter_username: techrah
+github_username:  ryanhomer
+profile_links:
+  LinkedIn: "https://www.linkedin.com/in/ryanhomer/"
+  # You can add more profile links above, or edit _includes/sidebar.html
+
+# Comment Service (Disqus or 多说)
+#  choose one and un-comment the line to active it
+#disqus_shortname: xxx   # get one: https://disqus.com/admin/signup/
+#duoshuo_shortname: xxx  # get one: http://duoshuo.com/create-site/
+
+excerpt_separator: <!--more-->
+
+header:
+  links:             # Links on the header. Link to in-site page with a slash as prefix
+    About: /about/
+    Categories: /categories/
+
+permalink: /archivers/:title
+plugins:
+ - jekyll-paginate
+ - jekyll-gist
+ - jemoji
+
+# Build settings
+paginate: 5
+paginate_path: "page:num"
+
+highlighter: rouge
+markdown: kramdown
+
+# https://jekyllrb.com/docs/configuration/#precedence
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  math_engine: mathjax
+
+# Exclude from processing.
+exclude:
+  - build
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
