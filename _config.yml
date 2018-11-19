@@ -12,8 +12,10 @@ avatar: "https://gravatar.com/avatar/30e45bcbe425836a2c970e896ffe55d0"
 profile: Frontend Software Developer<br/>Aspiring Data Scientist
 twitter_username: techrah
 github_username:  ryanhomer
+linkedin_username: ryanhomer
+stackoverflow_userid: 305383
 profile_links:
-  LinkedIn: "https://www.linkedin.com/in/ryanhomer/"
+  # LinkedIn: "https://www.linkedin.com/in/ryanhomer/"
   # You can add more profile links above, or edit _includes/sidebar.html
 
 # Comment Service (Disqus or 多说)

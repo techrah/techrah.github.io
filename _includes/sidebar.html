@@ -4,10 +4,24 @@
   <p>{{ site.profile }}</p>
   <p class="contact">
     {% if site.github_username %}
-    <a href="https://github.com/{{ site.github_username }}">GitHub</a>
+    <a href="https://github.com/{{ site.github_username }}" target="_blank">
+      <i class="fab fa-github fa-2x fa-fw"></i>
+    </a>
     {% endif %}
     {% if site.twitter_username %}
-    <a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>
+    <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
+      <i class="fab fa-twitter fa-2x fa-fw"></i>
+    </a>
+    {% endif %}
+    {% if site.stackoverflow_userid %}
+    <a href="https://stackoverflow.com/users/{{ site.stackoverflow_userid }}?tab=profile" target="_blank">
+      <i class="fab fa-stack-overflow fa-2x fa-fw"></i>
+    </a>
+    {% endif %}
+    {% if site.linkedin_username %}
+    <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank">
+      <i class="fab fa-linkedin fa-2x fa-fw"></i>
+    </a>
     {% endif %}
     {% for link in site.profile_links %}
     <a href="{{ link | last }}">{{ link | first }}</a>
