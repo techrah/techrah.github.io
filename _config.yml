@@ -1,5 +1,5 @@
 # Site settings
-title: Ryan Homer
+title: A Journey into Data Science
 url: "https://ryanhomer.github.io"
 baseurl: "" # the prefix of your site uri, eg. `"/jekyll-theme-EasyBook"` or empty string `""`
 timezone: America/Vancouver
