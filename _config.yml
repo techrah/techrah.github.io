@@ -27,7 +27,7 @@ excerpt_separator: <!--more-->
 
 header:
   links:             # Links on the header. Link to in-site page with a slash as prefix
-    About: /about/
+    Articles: /articles/
     Categories: /categories/
 
 permalink: /archivers/:title
@@ -38,7 +38,7 @@ plugins:
 
 # Build settings
 paginate: 5
-paginate_path: "page:num"
+paginate_path: "articles/page:num"
 
 highlighter: rouge
 markdown: kramdown
