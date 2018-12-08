@@ -9,7 +9,7 @@ description: >
 # Your information
 author: Ryan Homer
 avatar: "https://gravatar.com/avatar/30e45bcbe425836a2c970e896ffe55d0"
-profile: Frontend Software Developer<br/>Aspiring Data Scientist
+tagline: Frontend Software Developer<br/>Aspiring Data Scientist
 twitter_username: techrah
 github_username:  ryanhomer
 linkedin_username: ryanhomer
@@ -19,8 +19,7 @@ profile_links:
   # You can add more profile links above, or edit _includes/sidebar.html
 
 # Comment Service (Disqus or 多说)
-#  choose one and un-comment the line to active it
-#disqus_shortname: xxx   # get one: https://disqus.com/admin/signup/
+disqus_shortname: https-ryanhomer-github-io
 #duoshuo_shortname: xxx  # get one: http://duoshuo.com/create-site/
 
 excerpt_separator: <!--more-->
