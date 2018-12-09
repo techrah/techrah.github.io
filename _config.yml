@@ -26,6 +26,7 @@ excerpt_separator: <!--more-->
 
 header:
   links:             # Links on the header. Link to in-site page with a slash as prefix
+    Education: /education/
     Articles: /articles/
     Categories: /categories/
 
