@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Welcome. Bienvenidos. Bienvenue. 歡迎光臨。
+# Welcome. Bienvenidos. Bienvenue. 歡迎光臨
 
 I am a Frontend Software Developer. I code at [YoppWorks](https://www.yoppworks.com), developing web and mobile apps with React, React Native, JavaScript ES6 and related technologies such as Redux, Redux Saga and lodash/fp. I love functional programming. I am currently learning Reactive Architecture and Scala programming and Spark.
 
