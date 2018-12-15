@@ -17,6 +17,8 @@ body {
 	background-color: $header-bg;
 	padding: 10px;
 	margin: 0;
+  position: relative;
+  z-index: 999;
 
 	&:after {
 		clear: both;
@@ -24,7 +26,7 @@ body {
 		display: block;
 	}
 
-    #sidebar-toggle { display: none; }
+  #sidebar-toggle { display: none; }
 
 	.site-title {
 		float: left;
@@ -32,20 +34,74 @@ body {
 		text-decoration: none;
 		font-size: $base-font-size;
 		line-height: $base-font-size * 2;
+    margin: -10px;
+    margin-right: 0;
+    padding: 10px;
 	}
-	.site-nav {
+
+  .nav-scroll {
+    overflow-x: auto;
+    overflow-y: visible;
+    white-space: nowrap;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Multi-level navigation links */
+	nav {
 		text-align: right;
 
-		a {
-			text-decoration: none;
-			color: $header-link;
-			padding: 10px 20px;
-			white-space: nowrap;
+    a {
+      text-decoration: none;
+      color: $header-link;
+      padding: 10px 20px;
+      white-space: nowrap;
 
-			&:hover, &:focus {
-				background: $header-bg-hover;
-			}
-		}
+      &:hover, &:focus {
+        color: $header-link-hover;
+      }
+    }
+
+    a.navlinks-parent {
+      &:hover, &:focus {
+        background: $header-bg-hover;
+      }
+    }
+
+    .navlinks-container {
+      // position: relative;
+      display: inline-block;
+      text-align: left;
+      z-index: 90;
+      // overflow: visible;
+
+      .navlinks-children {
+        position: absolute;
+        margin-top: 10px;
+        width: 100%;
+        word-break: break-word;
+        background: $header-bg;
+
+        /*display: none;*/
+        transition: transform 0.3s;
+        transform-origin: top;
+        &:not(:hover) {
+          transform: scaleY(0);
+        }
+
+        .navlink-child {
+          height: 40px;
+        }
+      }
+
+      &:hover {
+        .navlinks-children {
+          /*display: block;*/
+          transform: scaleY(1);
+        }
+      }
+    }
 	}
 }
 
@@ -69,10 +125,6 @@ $hide-sidebar-screen-width: 1120px;
       background-repeat: no-repeat;
       background-position: center center;
       color: transparent;
-		}
-
-		.site-nav {
-      text-align: center;
 		}
   }
 }
@@ -232,11 +284,11 @@ $hide-sidebar-screen-width: 1120px;
 }
 
 @include media-query($on-palm) {
-	.header {
-		&, .site-nav{
-			text-align: center;
-		}
-	}
+  .header {
+    &, .site-nav{
+      text-align: center;
+    }
+  }
 	.col-main {
 		padding: 10px;
 	}
