@@ -34,7 +34,7 @@ body {
 		line-height: $base-font-size * 2;
 	}
 	.site-nav {
-		text-align:right;
+		text-align: right;
 
 		a {
 			text-decoration: none;
@@ -55,31 +55,26 @@ $hide-sidebar-screen-width: 1120px;
 
 .header-placeholder { position: absolute; }
 @media (max-width: $hide-sidebar-screen-width) {
-    .header-placeholder { position: static; }
-    .header {
-        position: fixed; left: 0; top: 0; right: 0; z-index: 20;
-        #sidebar-toggle {
-            float: right;
-            display: block;
-            cursor: pointer;
-            margin: -10px;
-            margin-left: 0;
-            padding: 10px;
-            background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+PHN2ZyBmaWxsPSJub25lIiBoZWlnaHQ9IjI0IiBzdHJva2U9IiNGRkYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48bGluZSB4MT0iMyIgeDI9IjIxIiB5MT0iMTIiIHkyPSIxMiIvPjxsaW5lIHgxPSIzIiB4Mj0iMjEiIHkxPSI2IiB5Mj0iNiIvPjxsaW5lIHgxPSIzIiB4Mj0iMjEiIHkxPSIxOCIgeTI9IjE4Ii8+PC9zdmc+);
-            background-repeat: no-repeat;
-            background-position: center center;
-            color: transparent;
+  .header-placeholder { position: static; }
+  .header {
+    position: fixed; left: 0; top: 0; right: 0; z-index: 20;
+    #sidebar-toggle {
+      float: right;
+      display: block;
+      cursor: pointer;
+      margin: -10px;
+      margin-left: 0;
+      padding: 10px;
+      background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+PHN2ZyBmaWxsPSJub25lIiBoZWlnaHQ9IjI0IiBzdHJva2U9IiNGRkYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48bGluZSB4MT0iMyIgeDI9IjIxIiB5MT0iMTIiIHkyPSIxMiIvPjxsaW5lIHgxPSIzIiB4Mj0iMjEiIHkxPSI2IiB5Mj0iNiIvPjxsaW5lIHgxPSIzIiB4Mj0iMjEiIHkxPSIxOCIgeTI9IjE4Ii8+PC9zdmc+);
+      background-repeat: no-repeat;
+      background-position: center center;
+      color: transparent;
 		}
 
 		.site-nav {
-			display: none;
+      text-align: center;
 		}
-
-		&.expand-sidebar .site-nav {
-			display: block;
-			animation: ebani-fadein ease .5s 1;
-		}
-    }
+  }
 }
 
 .page-content {
@@ -112,7 +107,7 @@ $hide-sidebar-screen-width: 1120px;
 	}
 }
 
-// Colum
+// Column
 .col-main {
 	position: relative;
 	box-sizing: border-box;
@@ -235,13 +230,11 @@ $hide-sidebar-screen-width: 1120px;
 		padding: 15px 0 ;
 	}
 }
+
 @include media-query($on-palm) {
 	.header {
 		&, .site-nav{
-			text-align:center;
-		}
-		.site-title {
-			float: none;
+			text-align: center;
 		}
 	}
 	.col-main {
