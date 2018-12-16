@@ -13,7 +13,7 @@ I made my debut in mobile app development in 2008 with the iPhone and have since
   <div>
     <img class="brand-logo gospaces" src="images/gospaces.png" srcset="images/gospaces.png 1x, images/gospaces@2x.png 2x" />
     <img class="brand-logo robothive" src="images/robothive.png" />
-    <img class="brand-logo timeplay" src="images/timeplay.png" srcset="images/timeplay.png 1x, images/timeplay.png@2x 2x" />
+    <img class="brand-logo timeplay" src="images/timeplay.png" srcset="images/timeplay.png 1x, images/timeplay@2x.png 2x" />
   </div>
   <div>
     <img class="brand-logo shomi" src="images/shomi.png" srcset="images/shomi.png 1x, images/shomi@2x.png 2x" />
