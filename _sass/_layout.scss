@@ -58,13 +58,13 @@ body {
       padding: 10px 20px;
       white-space: nowrap;
 
-      &:hover, &:focus {
+      &:hover, &:focus, &:active {
         color: $header-link-hover;
       }
     }
 
     a.navlinks-parent {
-      &:hover, &:focus {
+      &:hover, &:focus, &:active {
         background: $header-bg-hover;
       }
     }
