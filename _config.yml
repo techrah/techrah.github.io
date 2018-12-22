@@ -28,6 +28,8 @@ excerpt_separator: <!--more-->
 
 # List of links in the navigation bar
 navbar-links:
+  Reference:
+    - Machine Learning Algorithms: /data-science/machine-learning-algorithms/
   Education: /education/
   Articles: /articles/
   Categories: /categories/
