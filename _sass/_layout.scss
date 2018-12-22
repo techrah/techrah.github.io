@@ -64,6 +64,7 @@ body {
     }
 
     a.navlinks-parent {
+      padding: 4px 20px;
       &:hover, &:focus, &:active {
         background: $header-bg-hover;
       }
