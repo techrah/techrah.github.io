@@ -17,6 +17,11 @@ var nav = {
       $.each(menus, function(i) {
         var parent = $(menus[i]).find(".navlinks-parent");
         var childrenContainer = $(menus[i]).find(".navlinks-children");
+
+        if (childrenContainer.length) {
+          parent.bind('click', toggleSubmenu);
+        }
+
         var children = $(menus[i]).find(".navlinks-children a");
         var words = [];
         $.each(children, function(idx, el) { words = words.concat($(el).text().trim()); });
@@ -44,5 +49,10 @@ var nav = {
     }
   },
 };
+
+function toggleSubmenu(e) {
+  var children = $(this).siblings('.navlinks-children');
+  children.toggleClass('submenu-toggle-on');
+}
 
 document.addEventListener('DOMContentLoaded', nav.init);

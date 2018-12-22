@@ -87,17 +87,13 @@ body {
 
         transition: transform 0.3s;
         transform-origin: top;
-        &:not(:hover) {
-          transform: scaleY(0);
-        }
+        transform: scaleY(0);
 
         .navlink-child {
           height: 40px;
         }
-      }
 
-      &:hover {
-        .navlinks-children {
+        &.submenu-toggle-on {
           transform: scaleY(1);
         }
       }
