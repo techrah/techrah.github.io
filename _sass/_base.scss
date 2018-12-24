@@ -25,7 +25,7 @@ code,pre {
 code {
 	color: #900;
 	background-color: #fff;
-	padding: 2px 5px;
+	padding: 2px 0;
 	border-radius: 5px;
 }
 pre {
@@ -48,7 +48,7 @@ pre code {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-    margin: 10pt auto;
+  // margin: 10pt auto;
 	background: #FFF;
 
 	td, th {
@@ -64,9 +64,9 @@ table {
 		font-weight:normal;
 	}
 
-	tr:hover {
-		background: rgba(255,255,0,0.2);
-	}
+	// tr:hover {
+	// 	background: rgba(255,255,0,0.2);
+	// }
 }
 
 h1,h2,h3,h4,h5,h6{

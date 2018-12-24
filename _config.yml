@@ -30,6 +30,7 @@ excerpt_separator: <!--more-->
 navbar-links:
   Reference:
     - Machine Learning Algorithms: /data-science/machine-learning-algorithms/
+    - LaTeX for Data Science: /data-science/latex-for-data-science/
   Education: /education/
   Articles: /articles/
   Categories: /categories/
