@@ -1,3 +1,6 @@
+// https://xuc.me/blog/katex-and-jekyll/
+// https://karas.io/blog/math-support-with-katex-on-github-pages/
+
 document.addEventListener('DOMContentLoaded', function() {
   function extractTex(str) {
     var res = str.replace(/\n/g,"");
