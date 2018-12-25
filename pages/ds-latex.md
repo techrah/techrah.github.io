@@ -3,6 +3,7 @@ layout: page
 title: LaTeX for Data Science
 permalink: /data-science/latex-for-data-science/
 nocomments: true
+last_updated: 2018-12-25
 ---
 |Category |Description | LaTeX | Result|
 |:---|:---|:---|:---|
@@ -21,5 +22,6 @@ nocomments: true
 ||Multiplication|`x \times y`|\\[x \times y\\]|
 ||Set of Real numbers|`\vec{b} \in \R^3`|\\[\vec{b} \in \R^3\\]|
 ||Blackboard Bold, e.g.: Real|`\vec{b} \in \mathbb{R}^3`|\\[\vec{b} \in \mathbb{R}^3\\]|
+||Sum|`\sum_{i=1}^{n} x_i^2`|\\[\sum_{i=1}^{n}x_i^2\\]|
 
 **NOTE:** This site uses [KaTeX](https://katex.org/docs/supported.html) for LaTeX rendering. You may have to modify your LaTeX code slightly depending on your environment.
