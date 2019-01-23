@@ -27,6 +27,11 @@ nocomments: true
 <br> Udemy, April 2018
 - **[Scala and Spark for Big Data and Machine Learning][6]**
 <br> Udemy, December 2018
+- **[Reactive Architecture: 1. Introduction to Reactive Systems][7]**
+- **[Reactive Architecture: 2. Domain Driven Design][8]**
+- **[Reactive Architecture: 3. Reactive Microservices][9]**
+- **[Reactive Architecture: 4. Building Scalable Systems][10]**
+<br> CognitiveClass.ai, Jan, 2019
 
 [1]: https://www.edx.org/course/calculus-1a-differentiation
 [2]: https://www.edx.org/course/introduction-to-linear-models-and-matrix-algebra
@@ -34,3 +39,7 @@ nocomments: true
 [4]: https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=221
 [5]: https://www.udemy.com/certificate/UC-L5IABJPY/
 [6]: https://www.udemy.com/certificate/UC-CN709PWF/
+[7]: https://courses.cognitiveclass.ai/certificates/66cc82eaf4b345cb8ecadfeeab3f1fd3
+[8]: https://courses.cognitiveclass.ai/certificates/34d123c37f9a4a109cae1d4c4ee8e60a
+[9]: https://courses.cognitiveclass.ai/certificates/9c2cfbaf8516497abd798d304570b045
+[10]: https://courses.cognitiveclass.ai/certificates/62601d53460b4adfa6eb2fe440f4e931
