@@ -31,6 +31,7 @@ nocomments: true
 - **[Reactive Architecture: 2. Domain Driven Design][8]**
 - **[Reactive Architecture: 3. Reactive Microservices][9]**
 - **[Reactive Architecture: 4. Building Scalable Systems][10]**
+- **[Reactive Architecture: 5. Distributed Messaging Patterns][11]**
 <br> CognitiveClass.ai, Jan, 2019
 
 [1]: https://www.edx.org/course/calculus-1a-differentiation
@@ -43,3 +44,4 @@ nocomments: true
 [8]: https://courses.cognitiveclass.ai/certificates/34d123c37f9a4a109cae1d4c4ee8e60a
 [9]: https://courses.cognitiveclass.ai/certificates/9c2cfbaf8516497abd798d304570b045
 [10]: https://courses.cognitiveclass.ai/certificates/62601d53460b4adfa6eb2fe440f4e931
+[11]: https://courses.cognitiveclass.ai/certificates/acfc73f569da41c9af532e08bf8bc6d0
