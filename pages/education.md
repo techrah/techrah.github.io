@@ -32,6 +32,7 @@ nocomments: true
 - **[Reactive Architecture: 3. Reactive Microservices][9]**
 - **[Reactive Architecture: 4. Building Scalable Systems][10]**
 - **[Reactive Architecture: 5. Distributed Messaging Patterns][11]**
+- **[Reactive Architecture: 6. CQRS & Event Sourcing][11]**
 <br> CognitiveClass.ai, Jan, 2019
 
 [1]: https://www.edx.org/course/calculus-1a-differentiation
@@ -45,3 +46,4 @@ nocomments: true
 [9]: https://courses.cognitiveclass.ai/certificates/9c2cfbaf8516497abd798d304570b045
 [10]: https://courses.cognitiveclass.ai/certificates/62601d53460b4adfa6eb2fe440f4e931
 [11]: https://courses.cognitiveclass.ai/certificates/acfc73f569da41c9af532e08bf8bc6d0
+[12]: https://courses.cognitiveclass.ai/certificates/cc8efc06ec9041c2bc8858e04bce4dde
