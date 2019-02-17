@@ -35,7 +35,7 @@ navbar-links:
   Articles: /articles/
   Categories: /categories/
 
-permalink: /archivers/:title
+permalink: /posts/:title
 plugins:
  - jekyll-paginate
  - jekyll-gist
