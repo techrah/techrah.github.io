@@ -12,5 +12,14 @@ Since it's pending CRAN approval, for the time being, you can simply add the [`m
 So now you can do a notebook like this in minutes:
 
 {% raw %}
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="800" src="../includes/eldar1.html"></iframe>
+  <iframe
+    frameborder="no"
+    border="0"
+    marginwidth="0"
+    marginheight="0"
+    width="100%"
+    height="100%"
+    src="../includes/eldar1.html"
+    onLoad="this.style.height = 0;this.style.height=this.contentWindow.document.body.scrollHeight+'px'"
+  ></iframe>
 {% endraw %}
