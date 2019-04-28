@@ -4,7 +4,6 @@ title:  "Putting the Brakes on Data Science"
 date:   2018-12-09
 categories: [data-science, machine-learning]
 ---
-
 It's almost a distant memory. When did all the Data Science hype begin? For me, it started with "Big Data." This term was coined before we stared talking about Data Science as a discipline. The world was starting to produce massive amounts of data and the prospect of being able to do something useful with all this data was interesting. I was curious but just an observer. Where was all this going? Would it grow legs? Then we started talking about Machine Learning and Data Science. And I grew more and more curious. After all, how can you not be curious at the future that will be at the core of everything we do and affect so many aspects of our lives from AI-driven personal assistants to self-driving cars.
 
 I could bare it no more. I could no longer be a passive observer. Might as well jump on the bandwagon, right? Well, short of a personal mentor, or an institution for higher education, it has been said that learning through video is a good way to ramp up your skills, a shortcut of sorts. Time to find some. Ok Google.

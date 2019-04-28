@@ -24,7 +24,7 @@ profile_links:
 disqus_shortname: https-ryanhomer-github-io
 #duoshuo_shortname: xxx  # get one: http://duoshuo.com/create-site/
 
-excerpt_separator: <!--more-->
+excerpt_separator: "\n\n"
 
 # List of links in the navigation bar
 navbar-links:

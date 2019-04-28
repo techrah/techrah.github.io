@@ -4,7 +4,6 @@ title:  "The Basics of R Markdown to Presentation Output"
 date:   2019-04-13
 categories: [r-lang, r-studio]
 ---
-
 If you're new to the world of R Studio, wrapping your head around [R Markdown][1] notebooks and documents can be a little tricky. Notebooks are meant to be interactive and are great for mixing markdown with R code blocks as you work your way through a report. Then you try to print and... not what you expected. So, what's going on under the hood and how do you fix it?
 
 ## Markdown Notebooks vs. Documents
