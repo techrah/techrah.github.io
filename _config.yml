@@ -32,8 +32,8 @@ navbar-links:
     - Machine Learning Algorithms: /data-science/machine-learning-algorithms/
     - LaTeX for Data Science: /data-science/latex-for-data-science/
   Education: /education/
-  Articles: /articles/
   Categories: /categories/
+  About: /about/
 
 permalink: /posts/:title
 plugins:
@@ -43,7 +43,7 @@ plugins:
 
 # Build settings
 paginate: 5
-paginate_path: "articles/page:num"
+paginate_path: "page:num"
 
 highlighter: rouge
 markdown: kramdown
