@@ -2,7 +2,7 @@
 layout: post
 title: "Setting up R on macOS for Data Science"
 summary: "Set up R for minimal code compiling and maximum speed"
-image: "/images/RLogo.png"
+image: "/images/r-logo-inset-2.png"
 date: 2019-06-15
 categories: [data-science, r-lang]
 ---
