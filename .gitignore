@@ -2,3 +2,4 @@ _site
 .idea
 .jekyll-metadata
 *.sublime-workspace
+*.DS_Store
