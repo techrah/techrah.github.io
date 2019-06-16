@@ -81,3 +81,15 @@ h1,h2,h3,h4,h5,h6{
 	font-family: "hygl";
 	font-size: 2.2em;
 }
+
+.image {
+  margin: 10pt 0 auto;
+  figcaption {
+    text-align: center;
+    font-style: oblique;
+  }
+}
+
+code a {
+  color: unset;
+}
