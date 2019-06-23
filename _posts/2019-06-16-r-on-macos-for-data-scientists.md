@@ -3,7 +3,7 @@ layout: post
 title: "Setting up R on macOS for Data Science"
 summary: "Set up R for minimal code compiling and maximum speed"
 image: "/images/r-logo-inset-2.png"
-date: 2019-06-15
+date: 2019-06-16
 categories: [data-science, r-lang]
 ---
 Terminals and package managers. If you are a developer or a power user, you're probably already yawning. However, while some data scientists have technical backgrounds and can run circles around us "devs" at the command line, many come from non-technical fields. There's one reason why I focus on data scientists in this post, though obviously anyone can take advantage of this method of setting up R on macOS: it's speed.
