@@ -15,7 +15,7 @@ Also, without careful setup, some packages that are capable of taking advantage 
 As a data scientist, you'll probably spend a lot of time on your local workstation training and re-training your data models as you tweak and tune them. If you install R correctly, you will proabably save a lot of time both installing packages and training your models.
 
 # Background
-R is built from C, Fortran and recursively from R source code itself. CRAN (Comprehensive R Archive Network) is the main repository for R packages from which you will install most of the packages you need. Package hosted on CRAN include pre-built binary packages targeted for Windows and macOS. If you use a version of R that was built by CRAN, it will be able to download and install the pre-built binaries "out of the box" without having to build them from source.
+R is built from C, Fortran and recursively from R source code itself. CRAN (Comprehensive R Archive Network) is the main repository for R packages from which you will install most of the packages you need. Packages hosted on CRAN include pre-built binary packages targeted for Windows and macOS. If you use a version of R that was built by CRAN, it will be able to download and install the pre-built binaries "out of the box" without having to build them from source.
 
 You may still need to build from source from time to time, so I'll also cover how to set up LLVM and GNU Forton with OpenMP support. Even though the macOS Command Line Tools from Apple includes an LLVM compiler, there is still no support for OpenMP, so we'll need to install our own version (via `brew`).
 
@@ -110,7 +110,7 @@ There are times when you'll want to or need to build from source. For instance, 
 
 ## SDK Header Files
 
-With Xcode 10, the command line tools no not install the SDK header files anymore.
+With Xcode 10, the command line tools do not install the SDK header files anymore.
 
 > The command line tools will search the SDK for system headers by default. However, some software may fail to build correctly against the SDK and require macOS headers to be installed in the base system under /usr/include.
 
