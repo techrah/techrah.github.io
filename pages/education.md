@@ -9,6 +9,10 @@ nocomments: true
 - **Bachelor of Applied Science (B.A.Sc.), Information Technology**
 <br>American InterContinental University, Plantation, FL, 2001
 
+## Certifications
+- **[Reactive Architecture][14]**
+<br> Lightbend, May 2019
+
 ## Continuing Education
 - **[Matrix Algebra][4]**
 <br>University of British Columbia, Vancouver, 2018
@@ -21,6 +25,8 @@ nocomments: true
 <br> MITx, July 2018
 - **[Introducation to Linear Models and Matrix Algebra][2]**
 <br> HarvardX, August 2018
+- **[Calculus 1B: Integration][13]**
+<br> MITx, July 2019
 
 ## Online Courses
 - **[Data Science and Machine Learning with R][5]**
@@ -32,10 +38,10 @@ nocomments: true
 - **[Reactive Architecture: 3. Reactive Microservices][9]**
 - **[Reactive Architecture: 4. Building Scalable Systems][10]**
 - **[Reactive Architecture: 5. Distributed Messaging Patterns][11]**
-- **[Reactive Architecture: 6. CQRS & Event Sourcing][11]**
+- **[Reactive Architecture: 6. CQRS & Event Sourcing][12]**
 <br> CognitiveClass.ai, Jan, 2019
 
-[1]: https://www.edx.org/course/calculus-1a-differentiation
+[1]: https://www.edx.org/course/calculus-1a-differentiation-2
 [2]: https://www.edx.org/course/introduction-to-linear-models-and-matrix-algebra
 [3]: https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=STAT&course=200
 [4]: https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=221
@@ -47,3 +53,5 @@ nocomments: true
 [10]: https://courses.cognitiveclass.ai/certificates/62601d53460b4adfa6eb2fe440f4e931
 [11]: https://courses.cognitiveclass.ai/certificates/acfc73f569da41c9af532e08bf8bc6d0
 [12]: https://courses.cognitiveclass.ai/certificates/cc8efc06ec9041c2bc8858e04bce4dde
+[13]: https://www.edx.org/course/calculus-1b-integration-2
+[14]: https://lightbend.mettl.com/applicant/result/download-certificate?key=BBzVGObHU5KF%2BCmESSfC%2Bw%3D%3D
