@@ -40,6 +40,8 @@ nocomments: true
 - **[Reactive Architecture: 5. Distributed Messaging Patterns][11]**
 - **[Reactive Architecture: 6. CQRS & Event Sourcing][12]**
 <br> CognitiveClass.ai, Jan, 2019
+- **[The Numpy Stack: Numpy, Pandas, Matplotlib, Scipy][15]**
+<br> Udemy, July 2019
 
 [1]: https://www.edx.org/course/calculus-1a-differentiation-2
 [2]: https://www.edx.org/course/introduction-to-linear-models-and-matrix-algebra
@@ -55,3 +57,4 @@ nocomments: true
 [12]: https://courses.cognitiveclass.ai/certificates/cc8efc06ec9041c2bc8858e04bce4dde
 [13]: https://www.edx.org/course/calculus-1b-integration-2
 [14]: https://lightbend.mettl.com/applicant/result/download-certificate?key=BBzVGObHU5KF%2BCmESSfC%2Bw%3D%3D
+[15]: https://www.udemy.com/certificate/UC-HC4CGVCB/
