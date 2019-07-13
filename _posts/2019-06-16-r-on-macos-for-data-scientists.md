@@ -17,7 +17,7 @@ As a data scientist, you'll probably spend a lot of time on your local workstati
 # Background
 R is built from C, Fortran and recursively from R source code itself. CRAN (Comprehensive R Archive Network) is the main repository for R packages from which you will install most of the packages you need. Packages hosted on CRAN include pre-built binary packages targeted for Windows and macOS. If you use a version of R that was built by CRAN, it will be able to download and install the pre-built binaries "out of the box" without having to build them from source.
 
-You may still need to build from source from time to time, so I'll also cover how to set up LLVM and GNU Forton with OpenMP support. Even though the macOS Command Line Tools from Apple includes an LLVM compiler, there is still no support for OpenMP, so we'll need to install our own version (via `brew`).
+You may still need to build from source from time to time, so I'll also cover how to set up LLVM and GNU Fortran with OpenMP support. Even though the macOS Command Line Tools from Apple includes an LLVM compiler, there is still no support for OpenMP, so we'll need to install our own version (via `brew`).
 
 # Installing R
 1. Visit [cran.r-project.org](https://cran.r-project.org)
