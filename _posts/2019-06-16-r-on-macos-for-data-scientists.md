@@ -1,18 +1,16 @@
 ---
 layout: post
-title: "Setting up R on macOS for Data Science"
-summary: "Set up R for minimal code compiling and maximum speed"
+title: "Setting up R for Minimal Code Compilation and Maximum Speed"
+summary: "How to set up R on macOS for binary package installation and building against OpenMP"
 image: "/images/r-logo-inset-2.png"
 date: 2019-06-16
 categories: [data-science, r-lang]
 ---
-Terminals and package managers. If you are a developer or a power user, you're probably already yawning. However, while some data scientists have technical backgrounds and can run circles around us "devs" at the command line, many come from non-technical fields. There's one reason why I focus on data scientists in this post, though obviously anyone can take advantage of this method of setting up R on macOS: it's speed.
+If you're not careful how you install R on macOS, when you try to install R packages, R may try to build those packages from source. We like our package managers. They usually make finding and installing software a cinch. On macOS, the two most popular ones are MacPorts and Homebrew (a.k.a. `brew`). In this post, I'll be using `brew` -- partially. If you're already a `brew` fan and have had to install R, you most like did so with `brew install r`. This is probably the wrong choice for most people as this could prevent R from using pre-built binaries when installing packages.
 
-Many software packages are installed though command-line package managers. On macOS, the two most popular ones are MacPorts and Homebrew (a.k.a. `brew`). In this post, I'll be using `brew` -- partially. If you're already a `brew` fan and have had to install R, you most like did so with `brew install r`. However, this is probably the wrong choice for most people as this could prevent R from using pre-built binaries when installing packages.
+Installing R packages from source can take a long time and there's usually no advantage to doing do. Even if you force the R package installer to install the binary package instead of building it from source, these binary packages may expect R itself to be installed in a specific location and won't work if they can't find and link to the R framework.
 
-Also, without careful setup, some packages that are capable of taking advantage of parallel programming using OpenMP may not get built properly in order to do so.
-
-As a data scientist, you'll probably spend a lot of time on your local workstation training and re-training your data models as you tweak and tune them. If you install R correctly, you will proabably save a lot of time both installing packages and training your models.
+Moreover, unless you know what you're doing, you'll likely not build the package correctly for optimal speed and performance. If you're building from source and require optimal performance, you'll have to spend some time profiling your builds to ensure they are getting built optimally.
 
 # Background
 R is built from C, Fortran and recursively from R source code itself. CRAN (Comprehensive R Archive Network) is the main repository for R packages from which you will install most of the packages you need. Packages hosted on CRAN include pre-built binary packages targeted for Windows and macOS. If you use a version of R that was built by CRAN, it will be able to download and install the pre-built binaries "out of the box" without having to build them from source.
@@ -182,7 +180,7 @@ $ brew cask install rstudio
 
 # XQuartz & X11
 
-It is possilbe to get X11-related warnings or erros when installing packages or loading other R libraries.
+It is possible to get X11-related warnings or erros when installing packages or loading other R libraries.
 
 ```
 Warning message:
