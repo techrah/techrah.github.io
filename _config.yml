@@ -3,8 +3,11 @@ title: A Journey into Data Science
 url: "https://ryanhomer.github.io"
 baseurl: "" # the prefix of your site uri, eg. `"/jekyll-theme-EasyBook"` or empty string `""`
 timezone: America/Vancouver
+lang: en_CA
+webmaster_verifications:
+  google: "kbvSiBpivxTgHlkq_-j-2RI_o1KIvAgacVxnB5ukwOQ"
 description: >
-  A Data Science Journey.
+  A blog of a professional Software Developer making his way into the realm of Data Science.
 
 # Your information
 author: Ryan Homer
@@ -37,9 +40,10 @@ navbar-links:
 
 permalink: /posts/:title
 plugins:
- - jekyll-paginate
- - jekyll-gist
- - jemoji
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jemoji
 
 # Build settings
 paginate: 5
@@ -61,6 +65,10 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
   math_engine: mathjax
+
+twitter:
+  username: techrah
+  card: summary
 
 # Exclude from processing.
 exclude:
