@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="home">
-  <a class="rss-link" href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS Feed</a>
+  <a class="rss-link" href="{{ '/feed.xml' | prepend: site.baseurl }}">RSS Feed</a>
   <h1 class="page-heading">{{ site.title }}</h1>
 
   <ul class="post-list">
@@ -19,7 +19,7 @@ layout: default
           {%   else %}{{ post.content | lstrip | split: "
 " | first }}{% endif %}
           <p>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">Read More &raquo;</a>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">Read more &raquo;</a>
           </p>
         </div>
       </li>

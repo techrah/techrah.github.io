@@ -21,6 +21,11 @@
         color: #666;
     }
 }
+
+ul.post-list {
+  padding: 0;
+}
+
 .post-list {
     margin: 0;
 	padding: 20px 40px;
@@ -38,12 +43,12 @@
     .post-meta {
     	font-size: $small-font-size;
     	color: #666;
-        margin: 0 20px;
+        // margin: 0 20px;
         margin-bottom: .5em;
     }
     .post-excerpt {
         &, * {
-            font-size: $small-font-size;
+            // font-size: $small-font-size;
             padding-top: 0;
             padding-bottom: 0;
 	        color: #333;
@@ -69,7 +74,11 @@
                 opacity: 1;
             }
         }
-        margin: 0 20px;
+        // margin: 0 20px;
+    }
+    p .post-link {
+        font-size: 0.9em;
+        font-style: italic;
     }
     @include media-query($on-palm) {
 		padding: 10px;
