@@ -11,7 +11,7 @@ nocomments: true
 
 ## Certifications
 - **[Reactive Architecture][14]**
-<br> Lightbend, May 2019
+<br>Lightbend, May 2019
 
 ## Continuing Education
 - **[Matrix Algebra][4]**
@@ -22,26 +22,28 @@ nocomments: true
 ## Course Audits
 (edx.org)
 - **[Calculus 1A: Differentiation][1]**
-<br> MITx, July 2018
+<br>MITx, July 2018
 - **[Introducation to Linear Models and Matrix Algebra][2]**
-<br> HarvardX, August 2018
+<br>HarvardX, August 2018
 - **[Calculus 1B: Integration][13]**
-<br> MITx, July 2019
+<br>MITx, July 2019
 
 ## Online Courses
 - **[Data Science and Machine Learning with R][5]**
-<br> Udemy, April 2018
+<br>Udemy, April 2018
 - **[Scala and Spark for Big Data and Machine Learning][6]**
-<br> Udemy, December 2018
+<br>Udemy, December 2018
 - **[Reactive Architecture: 1. Introduction to Reactive Systems][7]**
 - **[Reactive Architecture: 2. Domain Driven Design][8]**
 - **[Reactive Architecture: 3. Reactive Microservices][9]**
 - **[Reactive Architecture: 4. Building Scalable Systems][10]**
 - **[Reactive Architecture: 5. Distributed Messaging Patterns][11]**
 - **[Reactive Architecture: 6. CQRS & Event Sourcing][12]**
-<br> CognitiveClass.ai, Jan, 2019
+<br>CognitiveClass.ai, Jan 2019
 - **[The Numpy Stack: Numpy, Pandas, Matplotlib, Scipy][15]**
-<br> Udemy, July 2019
+<br>Udemy, July 2019
+- **[Lightbend Scala Language - Professional][16]**
+<br>Lightbend Academy, August 2019
 
 [1]: https://www.edx.org/course/calculus-1a-differentiation-2
 [2]: https://www.edx.org/course/introduction-to-linear-models-and-matrix-algebra
@@ -58,3 +60,4 @@ nocomments: true
 [13]: https://www.edx.org/course/calculus-1b-integration-2
 [14]: https://lightbend.mettl.com/applicant/result/download-certificate?key=BBzVGObHU5KF%2BCmESSfC%2Bw%3D%3D
 [15]: https://www.udemy.com/certificate/UC-HC4CGVCB/
+[16]: https://academy.lightbend.com/courses/course-v1:lightbend+LSL-P-Scala-Language-Professional+v1/about
