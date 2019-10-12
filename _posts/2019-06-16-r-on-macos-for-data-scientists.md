@@ -4,7 +4,7 @@ title: "Setting up R for Minimal Code Compilation and Maximum Speed"
 summary: "How to set up R on macOS for binary package installation and building against OpenMP"
 image: "/images/r-logo-inset-2.png"
 date: 2019-06-16
-categories: [data-science, r-lang]
+categories: [r-lang, macOS, OpenMP]
 ---
 If you're not careful how you install R on macOS, when you try to install R packages, R may try to build those packages from source. We like our package managers. They usually make finding and installing software a cinch. On macOS, the two most popular ones are MacPorts and Homebrew (a.k.a. `brew`). In this post, I'll be using `brew` -- partially. If you're already a `brew` fan and have had to install R, you most like did so with `brew install r`. This is probably the wrong choice for most people as this could prevent R from using pre-built binaries when installing packages.
 
@@ -145,8 +145,6 @@ int main() {
 And try to build and run it:
 
 ```
-$ LDFLAGS="-L/usr/local/opt/llvm/lib"
-$ CPPFLAGS="-I/usr/local/opt/llvm/include"
 $ /usr/local/opt/llvm/bin/clang -fopenmp omptest.c -o omptest
 $ ./omptest
 
