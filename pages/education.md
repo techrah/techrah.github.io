@@ -6,7 +6,7 @@ nocomments: true
 ---
 
 ## Degrees
-- **Bachelor of Applied Science (B.A.Sc.), Information Technology**
+- **Bachelor of Information Technology**
 <br>American InterContinental University, Plantation, FL, 2001
 
 ## Certifications
