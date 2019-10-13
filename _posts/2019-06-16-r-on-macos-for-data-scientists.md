@@ -170,6 +170,8 @@ To configure R to build packages with the versions of `clang` and `gcc` you just
 
 <script src="https://gist.github.com/ryanhomer/efad63c28827763822068a3f09012b19.js"></script>
 
+**_Update 2019-10-13_**: [Test Fortran/OpenMP configuration](./build-openmp-macos-catalina#fortran)
+
 # Install R Studio
 
 ```
