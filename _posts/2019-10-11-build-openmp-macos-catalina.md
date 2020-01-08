@@ -6,6 +6,8 @@ image: "/images/r-logo-inset-2.png"
 date: 2019-10-11
 categories: [r-lang, macOS, OpenMP]
 ---
+UPDATE: This article has been superseded by [Setting up R on macOS 10.15 Catalina (Complete Guide)](./build-openmp-macos-catalina-complete)
+<hr>
 In my previous post [Setting up R for Minimal Code Compilation and Maximum Speed][1], I discussed in detail how to set up R so that when you build from source, you can build against the OpenMP library. I was using macOS 10.14 Mojave. With the release of macOS Catalina, something had to break, right?
 
 When Apple released Xcode 10, the [release notes][2] included a workaround for compilers that were looking for header files at `/usr/include`. It also came with a warning that in a future release, it would no longer be provided.
