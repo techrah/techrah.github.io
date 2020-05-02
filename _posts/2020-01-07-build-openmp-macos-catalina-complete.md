@@ -12,7 +12,7 @@ This guide is intended to be a complete guide to setting up R (free desktop vers
 
 If you're not careful how you install R on macOS, when you try to install R packages, R may try to build those packages from source. We like our package managers. They usually make finding and installing software a cinch. On macOS, the two most popular ones are MacPorts and [Homebrew][1] (a.k.a. `brew`). In this post, I'll be using `brew` -- partially. If you're already a `brew` fan and have had to install R, you most like did so with `brew install r`. This is probably the wrong choice for most people as this could prevent R from using pre-built binaries when installing packages.
 
-Installing R packages from source can take a long time and there's usually no advantage to doing do. Even if you force the R package installer to install the binary package instead of building it from source, these binary packages may expect R itself to be installed in a specific location and won't work if they can't find and link to the R framework.
+Installing R packages from source can take a long time and there's usually no advantage to doing so. Even if you force the R package installer to install the binary package instead of building it from source, these binary packages may expect R itself to be installed in a specific location and won't work if they can't find and link to the R framework.
 
 Moreover, unless you know what you're doing, you'll likely not build the package correctly for optimal speed and performance. If you're building from source and require optimal performance, you'll have to spend some time profiling your builds to ensure they are getting built optimally.
 
@@ -43,7 +43,9 @@ You absolutely need **R Framework**. This will be installed in `/Library/Framewo
 
 Kick off the installation process by opening the package you just downloaded. When you get to the **Installation Type** make sure you select **Customize**.
 
-**IMPORTANT:** You should NOT install **Tcl/Tk** and **Texinfo** if you plan on using `brew` as your package manager. These packages are installed to `/usr/local` and `brew doctor` (the diagnostics options that checks the validity of your brew installation) will complain about this. We will install these two packages via `brew` instead.
+> **2020-05-02 UPDATE:** If you need Tck/Tk and/or Texinfo support, it seems that you must install those options with this R installation software. As far as I can tell, the paths to these libraries are configured during the building of the software package and there doesn't seem to be a feasible way to change these paths without rebuilding the software. If I find out otherwise, I'll revise this update. If you don't know what these libraries are for, you probably don't need them in which case, feel free to not install them.
+
+**IMPORTANT:** ~~You should NOT install **Tcl/Tk** and **Texinfo** if you plan on using `brew` as your package manager.~~ These packages are installed to `/usr/local` and `brew doctor` (the diagnostics options that checks the validity of your brew installation) will complain about this. ~~We will install these two packages via `brew` instead.~~
 
 > R 3.6.0 binary for OS X 10.11 (El Capitan) and higher, signed package. Contains R 3.6.0 framework, R.app GUI 1.70 in 64-bit for Intel Macs, Tcl/Tk 8.6.6 X11 libraries and Texinfo 5.2. The latter two components are optional and can be ommitted when choosing "custom install", they are only needed if you want to use the tcltk R package or build package documentation from sources.
 
@@ -124,7 +126,9 @@ Installing Homebrew will also install the Xcode Command Line Tools if not alread
 sudo xcode-select --install
 ```
 
-## Tck-tk and Texinfo
+## Tcl-tk and Texinfo
+
+> **2020-05-02 UPDATE:** Installed this way, the tcl-tk package is not automatically found by R. If you want Tcl/Tk support, you should include it with the base R installation software. You'll just have to live with the `brew doctor` warnings.
 
 These are the two packages we ommitted during the R installation so that they didn't conflict with Homebrew. We now install them via `brew`.
 
@@ -137,6 +141,8 @@ brew install tcl-tk texinfo
 There are times when you'll want to or need to build from source. For instance, if you're installing from a repository whose package only has source code, or if the source code is more recent than the binary version, R (by default) will build from source.
 
 ### SDK Header Files
+
+> **2020-05-01 UPDATE**: I no longer recommend exporting paths to the SDK header files for the purpose of building R packages, as I've experienced some side effects in the past and had to remove them from my own setup. The path to the SDK is now also configured in `Makevars` (see further down in this article).
 
 Even though both Xcode and the Command Line Tools are installed, some build systems still have trouble locating the macOS SDK header files. They expect system header files to be located in `/usr/include`. However, both Xcode and the Command Line Tools install them elsewhere. Apple used to provide a separate installation package (as part of the Xcode installation) that would install these SDK header files in `/usr/include`. However, Apple no longer provides this package.
 
@@ -212,7 +218,7 @@ Then, install it from source:
 
     install.packages("data.table", type = "source")
 
-If R installs it without error, you are set up to build C/C++ source code with OpenMP support. However, you should reinstall this package from the CRAN binaries unless you have a good reason not, so that you get optimal performance.
+If R installs it without error, you are set up to build C/C++ source code with OpenMP support. However, you should reinstall this package from the CRAN binaries unless you have a good reason against, so that you get optimal performance.
 
 ### Fortran
 
@@ -259,7 +265,7 @@ If all goes well, your setup is properly configured to build from Fortran source
 
 ## Install R Studio
 
-R Studio is available as a [Homebrew cask][2]. However, it requires the R cask to be installed. We avoided installing R this way because it doesn't allow a custom installation. I therefore recommend installing R Studio by [downloading the installer][3] from rstudio.com.
+R Studio is available as a [Homebrew cask][2]. However, it requires the R cask to be installed. We avoided installing R this way because it doesn't allow a custom installation and can't install pre-build binary packages from CRAN. I therefore recommend installing R Studio by [downloading the installer][3] from rstudio.com.
 
 ## XQuartz & X11
 
