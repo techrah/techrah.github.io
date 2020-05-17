@@ -243,6 +243,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  rouge
 
 BUNDLED WITH
    1.17.3

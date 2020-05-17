@@ -165,7 +165,7 @@ The Apple-supplied version of the LLVM compiler (`clang`) doesn't include suppor
 
 Now test your installation against OpenMP. Your shell's environment should be configured to find the macOS SDK header files. Create a file called `omptest.c`:
 
-```{c}
+```c
 #include <stdlib.h>
 #include <stdio.h>
 #include <omp.h>
@@ -212,11 +212,15 @@ To configure R to build packages with the versions of `clang` and `gcc` you just
 
 Now, try building from R. A good test is the `data.table` package. Uninstall it first, if it's already installed.
 
-    remove.packages("data.table")
+```r
+remove.packages("data.table")
+```
 
 Then, install it from source:
 
-    install.packages("data.table", type = "source")
+```r
+install.packages("data.table", type = "source")
+```
 
 If R installs it without error, you are set up to build C/C++ source code with OpenMP support. However, you should reinstall this package from the CRAN binaries unless you have a good reason against, so that you get optimal performance.
 
@@ -224,8 +228,10 @@ If R installs it without error, you are set up to build C/C++ source code with O
 
 You can also test to make sure your configuration can build Fortran code against the OpenMP libraries by installing an appropriate R package, e.g.: `bayesQR`.
 
-```
+```r
 > install.packages("bayesQR", type = "source")
+```
+```
 Installing package into ‘/Users/ryan/Library/R/3.6/library’
 (as ‘lib’ is unspecified)
 trying URL 'https://mirror.its.sfu.ca/mirror/CRAN/src/contrib/bayesQR_2.3.tar.gz'
