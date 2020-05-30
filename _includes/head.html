@@ -20,7 +20,8 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
-  {% if page.url | absolute_url contains site.prefix_url %}
+  {% capture my_location %}{{ page.url | absolute_url }}{% endcapture %}
+  {% if my_location contains site.prefix_url %}
     {% include ga.html %}
   {% endif %}
 
