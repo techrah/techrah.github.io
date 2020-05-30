@@ -10,8 +10,8 @@
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 
-  <!-- Specify css per page using custom_css: -->
   {% if page.custom_css %}
+    <!-- Specify css per page using custom_css: -->
     {% for stylesheet in page.custom_css %}
     <link rel="stylesheet" href="{{ "/css/" | append: stylesheet | append: ".css" | prepend: site.baseurl }}" media="screen" type="text/css">
     {% endfor %}
@@ -20,8 +20,9 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
-  <!-- Google Analytics -->
-  {% include ga.html %}
+  {% if page.url | absolute_url contains site.prefix_url %}
+    {% include ga.html %}
+  {% endif %}
 
   <!-- Font Awesome -->
   <script defer src="https://pro.fontawesome.com/releases/v5.11.2/js/all.js" integrity="sha384-S++1cFhwpxbtRScUliTyprAMK33gMHbukurY4rNyt9CxIniGm6PfioUsQPoAITQJ" crossorigin="anonymous"></script>
