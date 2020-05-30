@@ -6,8 +6,12 @@ nocomments: true
 ---
 
 ## Degrees
+
 - **Bachelor of Information Technology**
-<br>American InterContinental University, Plantation, FL, 2001
+<br>American InterContinental University, FL, USA, 2001
+
+- **Master of Data Science**
+<br>University of British Columbia, Vancouver, Canada, 2020
 
 ## Certifications
 - **[Reactive Architecture][14]**
