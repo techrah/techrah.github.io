@@ -68,9 +68,14 @@ kramdown:
   syntax_highlighter: rouge
   math_engine: mathjax
 
-twitter:
-  username: techrah
-  card: summary
+# jekyll-seo-tag plugin
+#
+#twitter:
+#  username: techrah
+#  card: summary
+
+# For custom Twitter card handling
+twitter_default_card_image: /mstile-150x150.png
 
 # Exclude from processing.
 exclude:
