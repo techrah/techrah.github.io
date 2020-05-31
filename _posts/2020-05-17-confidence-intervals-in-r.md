@@ -2,7 +2,7 @@
 layout: post
 title: "Calculating Confidence Intervals in R"
 summary: "A brief overview of calculating confidence intervals in R"
-image: "/images/errrorbar.png"
+image: "/images/errorbar.png"
 date: 2020-05-17
 categories: [stats, r-lang]
 ---
