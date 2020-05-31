@@ -1,6 +1,6 @@
 /*!
  * EasyBook Jekyll Theme Javascript
- * 
+ *
  * http://laobubu.github.io/jekyll-theme-EasyBook
  * https://github.com/laobubu/jekyll-theme-EasyBook
  *
@@ -77,6 +77,8 @@ function TOCize(toc, content, matchHeightTo) {
         var level = +hs[i].tagName.substr(1);
         var hi = hs[i];
         var ti = make('li');
+        var pi = make('p');
+        pi.appendChild(ti);
         ti.appendChild(generateLink(hi));
         if (plevel < level) {
             do {
@@ -89,7 +91,7 @@ function TOCize(toc, content, matchHeightTo) {
             } while (--plevel > level);
         }
         cul = uls[uls.length - 1];
-        cul.appendChild(ti);
+        cul.appendChild(pi);
     }
     while (true) {
         var chs = uls[0].children;
