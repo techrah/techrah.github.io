@@ -15,6 +15,14 @@ common-js:
     <div class="page-content">
       <div class="wrapper">
         <div class="col-main">
+
+          {% if page.main_image.url %}
+            <div class="page-main-image">
+              <img src="{{ page.main_image.url }}" />
+              {% if page.main_image.caption %}<p>{{ page.main_image.caption | markdownify }}</p>{% endif %}
+            </div>
+          {% endif %}
+
           {{ content }}
         </div>
         <div class="col-second">
