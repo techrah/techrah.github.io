@@ -40,7 +40,7 @@ set.seed(4836)
 y <- sapply(x, f, true_theta0, true_theta1) + rnorm(n)
 ```
 
-This is a two-dimensional plot of the data. It looks linear so it reasonable to model the data with a straight line.
+This is a two-dimensional plot of the data. It looks linear so it's reasonable to model the data with a straight line.
 
 ![Graph of sample linear data](/images/mlo_sample_data.png)
 

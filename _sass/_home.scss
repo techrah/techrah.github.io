@@ -1,7 +1,8 @@
 .home {
 .page-heading {
-	font-size:40px;
+	font-size: 2em;
 	font-weight: normal;
+    font-variant: small-caps;
 	margin: 0;
     @include media-query($on-palm) {
 		margin: 10px;
