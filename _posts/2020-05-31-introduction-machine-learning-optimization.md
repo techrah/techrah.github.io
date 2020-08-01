@@ -61,13 +61,13 @@ The estimates are \\(\theta_0 = 5.218865\\) and \\(\theta_1 = 1.985435\\), which
 
 OLS uses the residual sum of squares ([RSS][3]) as a measure of how well our model fits the data. The lower the value the better, hence we will be _minimizing_ the RSS in determining suitable values for \\(\theta_0\\) and \\(\theta_1\\).
 
-\\[RSS = \sum\limits_{i=1}^n (\hat{y} - y)^2\\]
+\\[RSS = \sum (y - \hat{y})^2\\]
 
-where \\(\hat{y}\\) represents the estimated value of \\(y\\) based on the estimated parameters and \\(y\\) is the actual value from our data (the observed value). And in code,
+where \\(y\\) represents the actual values from our data (the observed values) and \\(\hat{y}\\) represents the predicted values of \\(y\\) based on the estimated parameters. And in code,
 
 ```r
 rss <- function(theta0, theta1) {
-  residuals <- f(x, theta0, theta1) - y
+  residuals <-  y - f(x, theta0, theta1)
   sum(residuals^2)
 }
 ```
@@ -169,7 +169,7 @@ As mentioned earlier, you can see that along the \\(\theta_0\\) axis (looking ac
 
 While the RSS measures the model's goodness of fit, it can grow really large, especially as the number of data examples (sample size) increases. To measure the "cost" of a particular combination of parameters, let's look the the mean squared error (MSE) instead. For our dataset of \\(n\\) examples, the MSE is simply \\(\frac{RSS}{n}\\).
 
-\\[MSE = \frac{1}{n} \sum\limits_{i=1}^n (\hat{y_i} - y_i)^2\\]
+\\[MSE = \frac{1}{n} \sum\limits_{i=1}^n (y_i - \hat{y_i})^2\\]
 
 where \\(\hat{y_i}\\) is the predicted or hypothesized value of \\(y_i\\) based on the parameters we choose for \\(\theta\\).
 
@@ -179,7 +179,7 @@ It should be noted that both RSS and MSE can be used as a cost function with the
 
 Substituting \\(h_{\theta}(x)\\) (hypothesis function) for \\(\hat{y}\\) and multiplying by \\(\frac{1}{2}\\) to simplify the math to come, we can write the loss function as
 
-\\[J(\theta) = \frac{1}{2n} \sum\limits_{i=1}^n (h_{\theta}(x_i) - y_i)^2\\]
+\\[J(\theta) = \frac{1}{2n} \sum\limits_{i=1}^n (y_i - h_{\theta}(x_i))^2\\]
 
 The \\(\theta\\) subscript in \\(h_{\theta}\\) is to remind you that \\(h\\) is a function of \\(\theta\\) which is important when taking the partial derivative, which we'll see shortly. As a reminder, we're trying to solve the following function.
 
@@ -211,25 +211,25 @@ The above example involved adjusting one parameter, \\(x\\). If we go back to ou
 
 Recall the cost function:
 
-\\[J(\theta) = \frac{1}{2n} \sum\limits_{i=1}^n (h_{\theta}(x_i) - y_i)^2\\]
+\\[J(\theta) = \frac{1}{2n} \sum\limits_{i=1}^n (y_i - h_{\theta}(x_i))^2\\]
 
 We now find the partial derivative of \\(J\\) with respect to \\(\theta_0\\). This partial derivative will tell us what direction \\(\theta_0\\) needs to move in order to decrease its cost contribution.
 
 $$\begin{aligned}
 
-\frac{\partial}{\partial \theta_0}(J(\theta)) &= \frac{\partial}{\partial \theta_0} \left( \frac{1}{2n} \sum\limits_{i=1}^n (h_{\theta}(x_i) - y_i)^2 \right) \\
+\frac{\partial}{\partial \theta_0}(J(\theta)) &= \frac{\partial}{\partial \theta_0} \left( \frac{1}{2n} \sum\limits_{i=1}^n (y_i - h_{\theta}(x_i))^2 \right) \\
 
-&= \frac{1}{2n} \sum\limits_{i=1}^n \frac{\partial}{\partial \theta_0}(h_{\theta}(x_i) - y_i)^2 \\
+&= \frac{1}{2n} \sum\limits_{i=1}^n \frac{\partial}{\partial \theta_0}(y_i - h_{\theta}(x_i))^2 \\
 
-&= \frac{1}{n} \sum\limits_{i=1}^n (h_{\theta}(x_i) - y_i) \frac{\partial}{\partial \theta_0}(h_{\theta}(x_i) - y_i) \\
+&= \frac{1}{n} \sum\limits_{i=1}^n (y_i - h_{\theta}(x_i)) \frac{\partial}{\partial \theta_0}(y_i - h_{\theta}(x_i)) \\
 
-&= \frac{1}{n} \sum\limits_{i=1}^n (h_{\theta}(x_i) - y_i) \frac{\partial}{\partial \theta_0}(\theta_0 + \theta_1x_i - y_i) \\
+&= \frac{1}{n} \sum\limits_{i=1}^n (y_i - h_{\theta}(x_i)) \frac{\partial}{\partial \theta_0}(y_i - (\theta_0 + \theta_1x_i)) \\
 
-&= \frac{1}{n} \sum\limits_{i=1}^n (h_{\theta}(x_i) - y_i) \left(  \frac{\partial}{\partial \theta_0}(\theta_0 ) + \frac{\partial}{\partial \theta_0}(\theta_1x_i) - \frac{\partial}{\partial \theta_0}(y_i) \right) \\
+&= \frac{1}{n} \sum\limits_{i=1}^n (y_i - h_{\theta}(x_i)) \left(\frac{\partial}{\partial \theta_0}(y_i) - \frac{\partial}{\partial \theta_0}(\theta_0 ) - \frac{\partial}{\partial \theta_0}(\theta_1x_i) \right) \\
 
-&= \frac{1}{n} \sum\limits_{i=1}^n (h_{\theta}(x_i) - y_i) \left(1 + 0 - 0\right) \\
+&= \frac{1}{n} \sum\limits_{i=1}^n (y_i - h_{\theta}(x_i)) \left(0 - 1 - 0\right) \\
 
-&= \frac{1}{n} \sum\limits_{i=1}^n (h_{\theta}(x_i) - y_i)
+&= - \frac{1}{n} \sum\limits_{i=1}^n (y_i - h_{\theta}(x_i))
 
 \end{aligned}$$
 
@@ -238,15 +238,15 @@ The the partial derivative for \\(\theta_1\\) is very similar.
 
 $$\begin{aligned}
 
-\frac{\partial}{\partial \theta_1}(J(\theta)) &= \frac{\partial}{\partial \theta_1} \left( \frac{1}{2n} \sum\limits_{i=1}^n (h_{\theta}(x_i) - y_i)^2 \right) \\
+\frac{\partial}{\partial \theta_1}(J(\theta)) &= \frac{\partial}{\partial \theta_1} \left( \frac{1}{2n} \sum\limits_{i=1}^n (y_i - h_{\theta}(x_i))^2 \right) \\
 
-&= \frac{1}{2n} \sum\limits_{i=1}^n \frac{\partial}{\partial \theta_1}(h_{\theta}(x_i) - y_i)^2 \\
+&= \frac{1}{2n} \sum\limits_{i=1}^n \frac{\partial}{\partial \theta_1}(y_i - h_{\theta}(x_i))^2 \\
 
-&= \frac{1}{n} \sum\limits_{i=1}^n (h_{\theta}(x_i) - y_i) \left(  \frac{\partial}{\partial \theta_1}(\theta_0) + \frac{\partial}{\partial \theta_1}(\theta_1x_i) - \frac{\partial}{\partial \theta_1}(y_i) \right) \\
+&= \frac{1}{n} \sum\limits_{i=1}^n (y_i - h_{\theta}(x_i)) \left(\frac{\partial}{\partial \theta_1}(y_i) - \frac{\partial}{\partial \theta_1}(\theta_0) - \frac{\partial}{\partial \theta_1}(\theta_1x_i) \right) \\
 
-&= \frac{1}{n} \sum\limits_{i=1}^n (h_{\theta}(x_i) - y_i) \left(0 + x_i - 0\right) \\
+&= \frac{1}{n} \sum\limits_{i=1}^n (y_i - h_{\theta}(x_i)) \left(0 - 0 - x_i\right) \\
 
-&= \frac{1}{n} \sum\limits_{i=1}^n (h_{\theta}(x_i) - y_i) x_i
+&= - \frac{1}{n} \sum\limits_{i=1}^n (y_i - h_{\theta}(x_i)) x_i
 
 \end{aligned}$$
 
@@ -261,12 +261,10 @@ The two partial derivatives above can be expressed in R as the following single 
 ```r
 mse_grad <- function(thetas) {
   pred_y <- f(x, thetas[1], thetas[2])
-  error = pred_y - y
-  g1 <- mean(error)
-  g2 <- mean(error * x)
-  res <- c(g1, g2)
-  names(res) <- c("theta_0", "theta_1")
-  res
+  error = y - pred_y
+  g1 <- -mean(error)
+  g2 <- -mean(error * x)
+  c(g1, g2)
 }
 ```
 
