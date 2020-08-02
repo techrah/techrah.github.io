@@ -4,10 +4,9 @@ title: About Me
 custom_css: about
 nocomments: true
 ---
+I am a professional software developer currently serving up web and mobile apps with React, React Native, JavaScript (ES2015+) and related technologies such as Redux, Redux Saga and lodash/fp. I am a functional programming enthusiast and love applying FP paradigms in JavaScript.
 
-I am a Frontend Software Developer. I code at [YoppWorks](https://www.yoppworks.com), developing web and mobile apps with React, React Native, JavaScript ES6 and related technologies such as Redux, Redux Saga and lodash/fp. I love functional programming. I am currently learning Reactive Architecture, Scala programming and Spark.
-
-I made my debut in mobile app development in 2008 with the iPhone and have since worked with many Canadian companies, helping them to bring their apps to market.
+I have been creating mobile apps since 2009 and React apps since 2016 and have worked with many companies to help them to bring their apps to market.
 
 <div class="brand-logos-outer"><div class="brand-logos">
   <div>
@@ -20,3 +19,11 @@ I made my debut in mobile app development in 2008 with the iPhone and have since
     <img class="brand-logo tangerine" src="/images/Tangerine_Bank_logo.svg" />
   </div>
 </div></div>
+
+### What I Did Before
+
+I started off my career in the networking domain as a Microsoft Certified Systems Engineer and Microsoft Certified Professional and have deployed and maintained a wide range of network services including web servers, forward and reverse proxies, firewalls, mail servers and directory services.
+
+### The Road Ahead
+
+A graduate of the Master of Data Science program at the University of British Columbia, I am a Data Science and Data Engineering enthusiast. I write blog posts on statistics, machine learning and other topics related to data science.
