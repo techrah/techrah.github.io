@@ -48,6 +48,8 @@ nocomments: true
 <br>Udemy, July 2019
 - **[Lightbend Scala Language - Professional][16]**
 <br>Lightbend Academy, August 2019
+- **[Tensorflow for Deep Learning with Python][17]**
+<br>Udemy, Aug 2020
 
 [1]: https://www.edx.org/course/calculus-1a-differentiation-2
 [2]: https://www.edx.org/course/introduction-to-linear-models-and-matrix-algebra
@@ -65,3 +67,4 @@ nocomments: true
 [14]: https://lightbend.mettl.com/applicant/result/download-certificate?key=BBzVGObHU5KF%2BCmESSfC%2Bw%3D%3D
 [15]: https://www.udemy.com/certificate/UC-HC4CGVCB/
 [16]: https://academy.lightbend.com/courses/course-v1:lightbend+LSL-P-Scala-Language-Professional+v1/about
+[17]: https://www.udemy.com/certificate/UC-dca90132-d91b-4e8a-a474-2450c3b43f77/
