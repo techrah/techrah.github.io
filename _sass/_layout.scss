@@ -102,7 +102,7 @@ body {
 }
 
 $col-main-width: 800px;
-$col-secnod-width: 300px;
+$col-second-width: 300px;
 $hide-sidebar-screen-width: 1120px;
 
 .header-placeholder { position: absolute; }
@@ -142,7 +142,7 @@ $hide-sidebar-screen-width: 1120px;
       content: '';
       display:block;
       position: absolute;
-      width: $col-secnod-width;
+      width: $col-second-width;
       height: 100%;
       right: 0;
       top: 0;
@@ -172,8 +172,8 @@ $hide-sidebar-screen-width: 1120px;
       animation: ebani-ascend ease .3s 1;
     }
   }
-  .page-main-image {
-    margin: -30px -40px 20px -40px;
+  .page-main-image, .page-image {
+    margin: 0 -40px 20px -40px;
     max-width: $col-main-width;
     img {
       margin-bottom: 0;
@@ -186,12 +186,15 @@ $hide-sidebar-screen-width: 1120px;
       text-align: right;
     }
   }
+  .page-main-image {
+    marginTop: -30px;
+  }
 }
 .col-second {
   position: relative;
   box-sizing: border-box;
   float: right;
-  width: $col-secnod-width;
+  width: $col-second-width;
   padding: 20px;
   background: #EEE;
   z-index: 10;
@@ -226,7 +229,7 @@ $hide-sidebar-screen-width: 1120px;
     .col-second, &:before {
       z-index: 10;
       transition: transform .4s;
-      transform: translateX( $col-secnod-width );
+      transform: translateX( $col-second-width );
     }
 
     &.expand-sidebar {
@@ -242,7 +245,7 @@ $hide-sidebar-screen-width: 1120px;
     width: 100%;
   }
   .col-second {
-    margin-left: - $col-secnod-width;
+    margin-left: - $col-second-width;
   }
 }
 .col-box-author {
