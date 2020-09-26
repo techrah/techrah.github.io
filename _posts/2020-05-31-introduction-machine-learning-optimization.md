@@ -19,7 +19,7 @@ Code examples are in R and use some functionality from the `tidyverse` and `plot
 
 Two dimensional data is good for illustrating optimization concepts so let's starts with data with one feature paired with a response. The data might represent the distance an object has travelled (y) after some time (x), as an example. However, I'll use a very simple, meaningless dataset so we can focus on the optimization.
 
-Here, I generate data according to the formula \\(y = 2x + 5\\) with some added noise to simulate measuring data in the real world. The data points follow a linear pattern so we will try to fit \\(y = mx + c\\) to the data and estimate values for coefficients \\(m\\) and \\(c\\). We expect to get something close to \\(m=2\\) and \\(c=5\\). In machine learning, we usually refer to the coefficients as parameters and symbolize them with the greek letter \\(\theta\\) so let's rewrite the formula as \\(y = \theta_0 + \theta_1x\\).
+Here, I generate data according to the formula \\(y = 2x + 5\\) with some added noise to simulate measuring data in the real world. The data points follow a linear pattern so we will try to fit \\(y = mx + c\\) to the data and estimate values for coefficients \\(m\\) and \\(c\\). We expect to get something close to \\(m=2\\) and \\(c=5\\). In machine learning, we usually refer to the coefficients as parameters and symbolize them with the Greek letter \\(\theta\\) so let's rewrite the formula as \\(y = \theta_0 + \theta_1x\\).
 
 ```r
 # Number of examples (number of data points)
@@ -107,7 +107,7 @@ _**Attribution:** Code folding blocks from endtoend.ai's blog post, [Collapsible
 
 You can immediately see that a value of approximately \\(5.2\\) for \\(\theta_0\\) will give the minimum RSS value. Likewise, a value of approximately \\(2\\) for \\(\theta_1\\) achieves the minimum RSS value.
 
-**NOTE:** There is only one minimum RSS value that we want to achieve while variying _both_ parameters simultaneously. The two-dimensional graphs only illustrate one parameter being varied at a time and are for illustration purposes only.
+**NOTE:** There is only one minimum RSS value that we want to achieve while varying _both_ parameters simultaneously. The two-dimensional graphs only illustrate one parameter being varied at a time and are for illustration purposes only.
 
 ### RSS in 3D
 
@@ -141,7 +141,7 @@ _**Attribution:** Original Plotly code for showing RSS of 2D parameter space in 
 
 ![RSS graph with both parameters varying](/images/mlo_rss_2.png)
 
-You can see that as \\(\theta_1\\) moves towards its optimal value, the RSS drops quickly but the the descent is not as rapid as \\(\theta_0\\) moves towards its optimal value. We'll see this again when I cover _Gradient Descent_ shortly.
+You can see that as \\(\theta_1\\) moves towards its optimal value, the RSS drops quickly but that the descent is not as rapid as \\(\theta_0\\) moves towards its optimal value. We'll see this again when I cover _Gradient Descent_ shortly.
 
 ### Where is the minimum RSS value?
 
