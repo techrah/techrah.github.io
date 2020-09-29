@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A Deep Dive into A/B Testing Fundamentals
-summary: "A/B Testing: Statistical Power and Early Peeking"
+summary: "A/B Testing fundamentals including statistical power and early peeking."
 image: /images/ab_main.png
 main_image:
   url: /images/ab_main.png
@@ -139,7 +139,7 @@ Now, let's assume we had randomly served each version 1000 times to website visi
 SE = \sqrt{\dfrac{\hat{p}_a \hat{q}_a}{n_a} + \dfrac{\hat{p}_b \hat{q}_b}{n_b}} = \sqrt{\dfrac{\hat{p}_a \hat{q}_a + \hat{p}_b \hat{q}_b}{n}}
 \\]
 
-But wait! If the null hypothesis is true, we're saying that there is no significant difference in CTR, so we'll use a pooled standard error instead, replacing the single proportion with an average of the two.
+But wait! If the null hypothesis is true, we’re saying that there is no significant difference in CTR, so we’ll use a pooled standard error instead. Given that both groups have the same number of observations, we can replace the single proportion with an average of the two.
 
 \\[
 SE_{pooled} = \sqrt{2 \times \frac{\hat{p}\_{pooled}\hat{q}\_{pooled}}{n}}
@@ -147,7 +147,7 @@ SE_{pooled} = \sqrt{2 \times \frac{\hat{p}\_{pooled}\hat{q}\_{pooled}}{n}}
 \\]
 \\[= \sqrt{\frac{1}{n}} \space \sqrt{(\hat{p}_a+\hat{p}_b)\left(1-\frac{\hat{p}_a+\hat{p}_b}{2}\right)}\\]
 
-The \\(\sqrt\frac{1}{n}\\) has been factored out for clarity and, as you'll see later on, will be cancelled out completely. The other part of the expression will show up later on when we take a peek into some R code from the `stats` package.
+The \\(\sqrt\frac{1}{n}\\) has been factored out for clarity and will help with the math later on as we derive the power formula used by one of the R functions from the `stats` package.
 
 Using a standard significance level \\((\alpha)\\) of 0.05,
 
@@ -175,6 +175,8 @@ The null model tell us that the mean difference in CTR between the two versions 
 The shaded green area represents 5% of the area under the curve, 2.5% each side. Since the difference in CTR is negative when Version B performs worse, we have to take both sides into account. So, if \\(H_0\\) is true, upon measuring the difference in CTR, there is a 5% chance that it falls in the shaded area and we _incorrectly_ reject \\(H_0\\), committing a type I error or a false positive (we thought we detected an effect that wasn't really there).
 
 ### The Alternative Model and the Quest for Power
+
+We are performing a two-sided hypothesis test since we want to detect if version B is doing better OR worse. The alternative hypothesis would therefore be that "there is some difference between the click-through rates of versions A and B," i.e. \\(CTR\_a \ne CTR\_b\\).
 
 Now suppose the alternative hypothesis \\((H_A)\\) is true and the mean CTR for Version B is indeed 1%? In this case, we'd expect most of our difference-between-proportions calculations \\((CTR_b - CTR_a)\\)  to be closer to 0.005 (0.010 - 0.005) than to 0. Referencing the null model, when this value is greater than the critical value, we reject \\(H_0\\). This is exactly what we want. If \\(H_A\\) is true, we hope to gather enough evidence to reject \\(H_0\\). This then begs the question, "How likely are we to _incorrectly_ fail to reject \\(H_0\\)?" When \\(H_A\\) is true and we fail to reject \\(H_0\\), we commit a type II error or a false negative (we thought we didn't detect an effect, though there really was one). It's important to understand type I and II errors in order to understand power. To summarize,
 
@@ -443,7 +445,7 @@ function (n = NULL, p1 = NULL, p2 = NULL, sig.level = 0.05, power = NULL,
 }
 ```
 
-This is only meant to give you an understanding and appreciation of `power.prop.test`. There's a lot of math packed in there but ultimately, you only need to understand how to use it, not how it works.
+This is only meant to give you an understanding and appreciation of `power.prop.test`. There's a lot of math packed in there but ultimately, you only need to understand how to use it, not so much how it works.
 
 ## Early Peeking
 
@@ -612,6 +614,10 @@ The Z-statistic can then be calculated. The included code shows two ways to do t
 
 We can then compare the Z-statistic to the critical value based on \\(\alpha\\) and decide if to reject \\(H_0\\) or not. We'll repeat this experiment 5000 times. Since we know there is a difference in CTR, we expect to have a type II error rate of approximately 10% (or power of approximately 90%).
 
+> The [`simulate`](https://gist.github.com/ryanhomer/ee4535efd0c5afe01a7547614a18622b#file-ab_sim-r-L67-L98) function simulates `impression` number of users visiting a website. Each visitor is randomly assigned version A or version B. The probability of a click-through by the visitor is simulated with the probabilities (`p_a` and `p_b`).
+>
+> By default, it will only perform the hypothesis test based on all the results. To simulate checking the results at fixed, periodic intervals, supply the optional `num_checks` argument.
+
 ```r
 > 1:repetitions %>%
 +   map_lgl(~simulate(p_a,
@@ -642,7 +648,7 @@ So we incorrectly rejected \\(H_0\\) 5% of the time, which is what we expected.
 
 #### Type I and II Error Rates when Continuously Monitoring
 
-We've just seen that if we have the luxury of waiting for the required number of visitors needed to properly power our experiment, that the error rates are pretty much spot on. Now let's stop our experiment as soon as we get promising results and see what happens. We'll do this by setting `num_checks = impression` to check the results after every visit.
+We've just seen that if we have the luxury of waiting for the required number of visitors needed to properly power our experiment, that the error rates are pretty much spot on. Now let's stop our experiment as soon as we get promising results and see what happens. We'll do this by setting `num_checks = impressions` to check the results after every visit.
 
 Ironically, simulating early stopping takes longer than the previous simulations, so let’s add a progress bar.
 
@@ -675,7 +681,8 @@ I'll leave out the progress bar code for simplicity.
 +                     p_a, # no difference in CTR
 +                     impressions,
 +                     calc_z_statistic_wald,
-+                     alpha)) %>%
++                     alpha,
++                     num_checks = impressions)) %>%
 +   mean()
 [1] 0.2146
 ```
@@ -721,7 +728,7 @@ Let's verify that FWER < \\(\alpha\\) when \\(H_0\\) is true. We'll peek 10 time
 +                     p_a,
 +                     impressions,
 +                     calc_z_statistic_wald,
-+                     alpha/m,
++                     alpha/m, # notice the change in the significance level
 +                     num_checks = m)) %>%
 +   mean()
 >
@@ -756,7 +763,7 @@ There's also the Bayesian approach to A/B testing which can incorporate prior kn
 ## Further Reading
 
 - [How Etsy Handles Peeking in A/B Testing (by Callie McRee and Kelly Shen)][5] discusses some types of sequential testing and the one that Etsy ultimately settled on.
-- [The fourth Ghost of Experimentation: Peeking (By Lizzie Eardley, with Tom Oliver)][6] explains the peeking problem using multiple simulations and goes in a bit more detail about solutions to the peeking problem.
+- [The fourth Ghost of Experimentation: Peeking (By Lizzie Eardley, with Tom Oliver)][6] explains the peeking problem using multiple simulations for illustration and goes in a bit more detail about solutions to the peeking problem.
 - [The New Stats Engine (Pekelis, Walsh, Johari)][11] Sequential testing at Optimizely
 - [Explore vs Exploit Dilemma in Multi-Armed Bandits (by Kenneth Foo)][7] explains the concept of Multi-Armed Bandits in the context of A/B Testing.
 - [Bayesian A/B Testing at VWO (by Chris Stucchio)][12] goes into detail about Bayesian A/B Testing at VWO (Visual Website Optimizer).
