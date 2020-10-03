@@ -13,11 +13,11 @@ Acme Corporation sells widgets. The new model, Widget K, has been highlighted on
 
 Sally, the marketing manager, has come up with a new layout for a banner image that she thinks will result in a better click-through rate (CTR) and comes to you for advice on how to proceed. If this new _Version B_ of the banner image is actually performing worse, she would like to discontinue its use as soon as possible.
 
-**Note:** this article assumes that you understand sampling distributions, the Central Limit Theorem and hypothesis testing.
+**Note:** this article assumes that you understand the Central Limit Theorem, hypothesis testing and sampling distributions.
 
 ## The Concept
 
-In order to test both the original _Version A_ of the banner image and the new _Version B_, we will randomly serve both versions to website visitors. Over the course of the experiment, we'll randomly select A or B with equal probability to maintain a fairly balanced dataset with respect to the number of visitors served one version versus the other. As you will see shortly, this condition will help to simplify some initial calculations that we'll perform before we start the experiment. Here are some things that would be beneficial for Sally to know even before you start any experiment.
+In order to test the performance of the original _Version A_ of the banner image against the new _Version B_, we will randomly serve both versions to website visitors. Over the course of the experiment, we'll randomly select A or B with equal probability to maintain a fairly balanced dataset with respect to the number of visitors served one version versus the other. As you will see shortly, this condition will help to simplify some initial calculations that we'll perform before we start the experiment. Here are some things that would be beneficial for Sally to know even before you start any experiment.
 
 <style>
   div.ab_t1 { width: 95%; margin: 0 auto }
@@ -126,7 +126,7 @@ Since we are dealing with a _sample_, we need to determine the standard _error_ 
   </table>
 </div>
 
-We know the current mean CTR for Version A is 0.005 and we would like the mean CTR for Version B to increase a half of a percent to 0.01.
+We know the current CTR for Version A is 0.005 and we would like the CTR for Version B to increase a half of a percent to 0.01.
 
 - \\(\hat{p}_a=0.005\\)
 - \\(\hat{p}_b=0.01\\)
@@ -178,7 +178,7 @@ The shaded green area represents 5% of the area under the curve, 2.5% each side.
 
 We are performing a two-sided hypothesis test since we want to detect if version B is doing better OR worse. The alternative hypothesis would therefore be that "there is some difference between the click-through rates of versions A and B," i.e. \\(CTR\_a \ne CTR\_b\\).
 
-Now suppose the alternative hypothesis \\((H_A)\\) is true and the mean CTR for Version B is indeed 1%? In this case, we'd expect most of our difference-between-proportions calculations \\((CTR_b - CTR_a)\\)  to be closer to 0.005 (0.010 - 0.005) than to 0. Referencing the null model, when this value is greater than the critical value, we reject \\(H_0\\). This is exactly what we want. If \\(H_A\\) is true, we hope to gather enough evidence to reject \\(H_0\\). This then begs the question, "How likely are we to _incorrectly_ fail to reject \\(H_0\\)?" When \\(H_A\\) is true and we fail to reject \\(H_0\\), we commit a type II error or a false negative (we thought we didn't detect an effect, though there really was one). It's important to understand type I and II errors in order to understand power. To summarize,
+Now suppose the alternative hypothesis \\((H_A)\\) is true and the CTR for Version B is indeed 1%? In this case, we'd expect most of our difference-between-proportions calculations \\((CTR_b - CTR_a)\\)  to be closer to 0.005 (0.010 - 0.005) than to 0. Referencing the null model, when this value is greater than the critical value, we reject \\(H_0\\). This is exactly what we want. If \\(H_A\\) is true, we hope to gather enough evidence to reject \\(H_0\\). This then begs the question, "How likely are we to _incorrectly_ fail to reject \\(H_0\\)?" When \\(H_A\\) is true and we fail to reject \\(H_0\\), we commit a type II error or a false negative (we thought we didn't detect an effect, though there really was one). It's important to understand type I and II errors in order to understand power. To summarize,
 
 - When \\(H_0\\) is true,
   - we hope that enough data will show us a net zero effect and lead us to fail to reject \\(H_0\\).
