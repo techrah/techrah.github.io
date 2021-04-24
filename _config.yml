@@ -1,6 +1,6 @@
 # Site settings
 title: A Journey into Data Science
-prefix_url: https://ryanhomer.github.io
+prefix_url: https://techrah.github.io
 baseurl: "" # the prefix of your site uri, eg. `"/jekyll-theme-EasyBook"` or empty string `""`
 timezone: America/Vancouver
 lang: en_CA
@@ -14,9 +14,9 @@ author: Ryan Homer
 avatar:
   1x: "https://gravatar.com/avatar/30e45bcbe425836a2c970e896ffe55d0?s=135"
   2x: "https://gravatar.com/avatar/30e45bcbe425836a2c970e896ffe55d0?s=270"
-tagline: Software Development<br/>Data Science & Engineering
+tagline: Software/Data Engineering
 twitter_username: techrah
-github_username:  ryanhomer
+github_username:  techrah
 linkedin_username: ryanhomer
 stackoverflow_userid: 305383
 google_analytics_tracking_id: UA-140381686-1
