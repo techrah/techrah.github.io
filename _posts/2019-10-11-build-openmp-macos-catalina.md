@@ -41,7 +41,7 @@ As before, test to make sure you can build a [small test program that uses multi
 
 I've also updated my Makevars script so that `clang` can find the macOS SDK header files. Adjust your `~/.R/Makevars` file accordingly.
 
-<script src="https://gist.github.com/ryanhomer/efad63c28827763822068a3f09012b19.js"></script>
+<script src="https://gist.github.com/techrah/efad63c28827763822068a3f09012b19.js"></script>
 
 ### C/C++
 
