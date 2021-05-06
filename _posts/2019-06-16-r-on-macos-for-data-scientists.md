@@ -170,7 +170,7 @@ You no longer need to include `--without-multilib` on 64-bit-only systems as it 
 
 To configure R to build packages with the versions of `clang` and `gcc` you just installed, set up a `Makevars` file. This must be located at `~/.R/Makevars`. I've crafted this file from Internet research and some trial & error and have included some reference links in case you're interested.
 
-<script src="https://gist.github.com/ryanhomer/efad63c28827763822068a3f09012b19.js"></script>
+<script src="https://gist.github.com/techrah/efad63c28827763822068a3f09012b19.js"></script>
 
 # Install R Studio
 
